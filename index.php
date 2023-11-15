@@ -1,10 +1,23 @@
 <?php
 
-
-
 class Player
 {
     public $level;
+
+    public function __construct(int $level)
+    {
+        $this->level = $level;
+    }
+
+    public function getLevel()
+    {
+        return $this->level;
+    }
+
+    public function setLevel(int $newLevel)
+    {
+        $this->level = $newLevel;
+    }
 }
 
 
@@ -31,10 +44,8 @@ class Encounter
 }
 
 
-$greg = new Player;
-$greg->level = 400;
-$jade = new Player;
-$jade->level = 800;
+$greg = new Player(400);
+$jade = new Player(800);
 
 $encounter = new Encounter;
 
